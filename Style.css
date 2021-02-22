@@ -1,0 +1,21 @@
+body{
+    background-color: firebrick;
+}
+.header{
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+#webcam{
+    height: 300;
+    width:350;
+    border-style: ridge;
+    border:1px;
+    border-color:white;
+}
+#results{
+    height: 300;
+    width:350;
+    border-style: ridge;
+    border:1px;
+    border-color:white;
+}

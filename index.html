@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <title></title>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"
+        integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <center><button class="btn btn-warning header">
+                <h3>Emotion to emoji app<br> &#128522; &#128512; &#128545; &#128532; &#128549; &#128548;</h3>
+            </button>
+            <p style="color: white;">Take your selfie to generate the emojis</p>
+            <h3 style="color: red;">Are you Happy?</h3>
+            <h3 style="color: gray;">Are you Angry?</h3>
+            <h3 style="color: greenyellow;">Are you sad?</h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div id="webcam"></div>
+                    <button onclick="capture()" class="btn btn-dark">capture image</button>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h3 style="background-color: white; color:greenyellow;">Prediction 1-</h3>
+                    <span id="prediction1" style="font-size: medium;"></span>
+                    <h3 style="background-color: white; color:greenyellow;">Prediction 2-</h3>
+                    <span id="prediction2" style="font-size: medium;"></span>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div id="results"></div>
+                    <button class="btn btn-success" onclick="check()">Identify the emotion</button>
+                </div>
+            </div>
+
+        </center>
+    </div>
+</body>
+
+</html>
+<link rel="stylesheet" href="Style.css">
+<script src="main.js"></script>
